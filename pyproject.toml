@@ -1,0 +1,22 @@
+[project]
+name = "cv-fit-from-long-master"
+version = "0.1.0"
+description = "Tailor a long master CV to incoming vacancies — ATS analysis + bullet selection + .docx rendering, driven by Claude Code slash commands."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-docx>=1.1",
+]
+
+[project.optional-dependencies]
+# Nothing extra — all other scripts in bin/ use the Python stdlib only.
+
+[tool.uv]
+# Pin a working resolution; regenerate with `uv lock` after editing deps.
+package = false
+
+[tool.ruff]
+# Lightweight defaults — this isn't an application codebase, it's a few helper
+# scripts. If you add significant Python here, strengthen the config.
+line-length = 100
+target-version = "py310"

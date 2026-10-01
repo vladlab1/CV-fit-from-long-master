@@ -1,0 +1,6 @@
+{
+  "schema": "v1",
+  "purpose": "Append-only log of changes to the system's rules, agents, commands, or master-CV structural conventions. Scan periodically to detect rule churn, vacancy overfit, and recurring failure modes. See .claude/rules/rule-iterations-log.md.",
+  "schema_doc": "Each entry: {id (int, monotonic), date (YYYY-MM-DD), trigger {kind, vacancy_slug|null, what_user_flagged}, files_changed [], change_summary, failure_mode_fixed, regression_risk, follow_up|null}",
+  "iterations": []
+}
